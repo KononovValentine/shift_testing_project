@@ -1,0 +1,51 @@
+<resources>
+    <string name="app_name">ShiftTestingProject</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!--  card info  -->
+    <string name="scheme">SCHEME/NETWORK</string>
+    <string name="type">TYPE</string>
+    <string name="brand">BRAND</string>
+    <string name="prepaid">PREPAID</string>
+
+    <!--  card number  -->
+    <string name="card_number">CARD NUMBER</string>
+    <string name="length">LENGTH</string>
+    <string name="luhn">LUHN</string>
+
+    <!--  country  -->
+    <string name="country">COUNTRY</string>
+    <string name="alpha2">cut</string>
+    <string name="emoji">0x1F3F3</string>
+    <string name="country_name">NAME</string>
+    <string name="numeric">numeric:</string>
+    <string name="currency">currency:</string>
+    <string name="latitude">latitude:</string>
+    <string name="longitude">longitude:</string>
+
+    <!--  bank  -->
+    <string name="bank">BANK</string>
+    <string name="bank_name">Bank name: </string>
+    <string name="city">Bank city: </string>
+    <string name="url">url: </string>
+    <string name="phone">phone: </string>
+
+    <!--  auxiliary  -->
+    <string name="open_bracket">(</string>
+    <string name="close_bracket">)</string>
+    <string name="none">none</string>
+    <string name="yes">YES</string>
+    <string name="no">NO</string>
+    <string name="request">request</string>
+    <string name="history">history</string>
+    <string name="enter_request">Enter BIN</string>
+    <string name="main_hint">Enter the BIN (the first 6 digits) of the card in the field at the bottom and press the Request key to get the data.</string>
+    <string name="toast_bin_error">The format does not match, please enter the first 6 digits of the card number and try again.</string>
+    <string name="call_premission_denied">Permission for calls denied</string>
+    <string name="call_permission_granted">Permission for calls granted</string>
+    <string name="need_call_permission">To be able to make calls from the app, you need to grant permission for calls</string>
+    <string name="dialog_what_call_number">What number should I call?</string>
+    <string name="first_number">First</string>
+    <string name="second_number">Second</string>
+    <string name="history_info">To open the detailed information, click on the card. To delete, tap and hold on the card.</string>
+</resources>

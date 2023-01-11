@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="8dp"
+    android:layout_marginTop="8dp"
+    android:elevation="8dp"
+    app:cardCornerRadius="8dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingStart="8dp"
+        android:paddingTop="8dp"
+        android:paddingEnd="8dp"
+        android:paddingBottom="8dp">
+
+        <!--  card info left column -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_item_card_info_left_column"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tv_item_scheme_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/scheme"
+                android:textSize="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_item_scheme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_item_scheme_header" />
+
+            <TextView
+                android:id="@+id/tv_item_brand_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/brand"
+                android:textSize="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_item_scheme" />
+
+            <TextView
+                android:id="@+id/tv_item_brand"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_item_brand_header" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!--  card info right column  -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_item_card_info_right_column"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            app:layout_constraintStart_toEndOf="@id/cl_item_card_info_left_column"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tv_item_type_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/type"
+                android:textSize="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_item_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_item_type_header" />
+
+            <TextView
+                android:id="@+id/tv_item_prepaid_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/prepaid"
+                android:textSize="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_item_type" />
+
+            <TextView
+                android:id="@+id/tv_item_prepaid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_item_prepaid_header" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!--  card number  -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_item_card_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cl_item_card_info_left_column">
+
+            <TextView
+                android:id="@+id/tv_item_card_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/card_number"
+                android:textSize="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_item_length_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/length"
+                android:textSize="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_item_card_number" />
+
+            <TextView
+                android:id="@+id/tv_item_length"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_item_length_header" />
+
+            <TextView
+                android:id="@+id/tv_item_luhn_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="@string/luhn"
+                android:textSize="8dp"
+                app:layout_constraintStart_toEndOf="@id/tv_item_length_header"
+                app:layout_constraintTop_toBottomOf="@id/tv_item_card_number" />
+
+            <TextView
+                android:id="@+id/tv_item_luhn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10dp"
+                app:layout_constraintStart_toStartOf="@id/tv_item_luhn_header"
+                app:layout_constraintTop_toBottomOf="@id/tv_item_length_header" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!--  country  -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_item_country"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="@id/cl_item_card_info_right_column"
+            app:layout_constraintTop_toBottomOf="@id/cl_item_card_info_left_column">
+
+            <TextView
+                android:id="@+id/tv_item_country"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/country"
+                android:textSize="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_item_alpha2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_item_country" />
+
+            <TextView
+                android:id="@+id/tv_item_numeric"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:textSize="10dp"
+                app:layout_constraintStart_toEndOf="@id/tv_item_alpha2"
+                app:layout_constraintTop_toBottomOf="@id/tv_item_country" />
+
+            <TextView
+                android:id="@+id/tv_item_emoji"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:textSize="10dp"
+                app:layout_constraintStart_toEndOf="@id/tv_item_numeric"
+                app:layout_constraintTop_toBottomOf="@id/tv_item_country" />
+
+            <TextView
+                android:id="@+id/tv_item_county_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:textSize="10dp"
+                app:layout_constraintStart_toEndOf="@id/tv_item_emoji"
+                app:layout_constraintTop_toBottomOf="@id/tv_item_country" />
+
+            <TextView
+                android:id="@+id/tv_item_open_bracket"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/open_bracket"
+                android:textSize="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_item_alpha2" />
+
+            <TextView
+                android:id="@+id/tv_item_currency_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/currency"
+                android:textSize="8dp"
+                app:layout_constraintStart_toEndOf="@id/tv_item_open_bracket"
+                app:layout_constraintTop_toBottomOf="@id/tv_item_alpha2" />
+
+            <TextView
+                android:id="@+id/tv_item_currency"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:textSize="8dp"
+                app:layout_constraintStart_toEndOf="@id/tv_item_currency_header"
+                app:layout_constraintTop_toBottomOf="@id/tv_item_alpha2" />
+
+            <TextView
+                android:id="@+id/tv_item_latitude_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:text="@string/latitude"
+                android:textSize="8dp"
+                app:layout_constraintStart_toEndOf="@id/tv_item_currency"
+                app:layout_constraintTop_toBottomOf="@id/tv_item_alpha2" />
+
+            <TextView
+                android:id="@+id/tv_item_latitude"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:textSize="8dp"
+                app:layout_constraintStart_toEndOf="@id/tv_item_latitude_header"
+                app:layout_constraintTop_toBottomOf="@id/tv_item_alpha2" />
+
+            <TextView
+                android:id="@+id/tv_item_longitude_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:text="@string/longitude"
+                android:textSize="8dp"
+                app:layout_constraintStart_toEndOf="@id/tv_item_latitude"
+                app:layout_constraintTop_toBottomOf="@id/tv_item_alpha2" />
+
+            <TextView
+                android:id="@+id/tv_item_longitude"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:textSize="8dp"
+                app:layout_constraintStart_toEndOf="@id/tv_item_longitude_header"
+                app:layout_constraintTop_toBottomOf="@id/tv_item_alpha2" />
+
+            <TextView
+                android:id="@+id/tv_item_close_bracket"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/close_bracket"
+                android:textSize="8dp"
+                app:layout_constraintStart_toEndOf="@id/tv_item_longitude"
+                app:layout_constraintTop_toBottomOf="@id/tv_item_alpha2" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!--  bank  -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_item_bank"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tv_item_bank_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/bank"
+                android:textSize="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_item_bank_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_item_bank_header" />
+
+            <TextView
+                android:id="@+id/tv_item_bank_city"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_item_bank_name" />
+
+            <TextView
+                android:id="@+id/tv_item_bank_url"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_item_bank_city" />
+
+            <TextView
+                android:id="@+id/tv_item_bank_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_item_bank_url" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
